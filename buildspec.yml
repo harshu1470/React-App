@@ -8,18 +8,15 @@ Phases:
          - apt-get install curl
          - node --version
          - npm --version
-         - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-         - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-         - apt-get install -y yarn
     pre_build:
       commands:
-         - echo Installing yarn 
-         - yarn
-         - yarn --version
+         - echo Installing packages
+         - npm ci
     build:
       commands:
          - echo Building App
-         - yarn build
+
+         - npm run build
 artifacts:
     files:
       - "**/*"
