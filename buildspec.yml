@@ -17,8 +17,7 @@ Phases:
          - yarn --version
     build:
       commands:
-         - echo Testing
-         - yarn test
+       
          - echo Building App
          - yarn build
 artifacts:
