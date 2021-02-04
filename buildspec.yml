@@ -6,6 +6,7 @@ Phases:
          nodejs: 12
       commands:
          - echo installing Node12..
+         - apt-get update
          - apt-get install curl 
          - curl -sL https://deb.nodesource.com/setup_12.x | bash -
          - apt install -y nodejs
