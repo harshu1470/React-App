@@ -14,7 +14,7 @@ Phases:
     pre_build:
       commands:
          - echo Installing yarn 
-         - yarn
+         - yarn start
          - yarn --version
     build:
       commands:
