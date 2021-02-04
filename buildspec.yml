@@ -13,13 +13,17 @@ Phases:
     pre_build:
       commands:
          - echo Installing yarn 
-         
+         - yarn
          - yarn --version
     build:
       commands:
-       
          - echo Building App
          - yarn build
+         - echo testing
+         - yarn test
+    post_build:
+      commands:
+         - yarn start
 artifacts:
     files:
       - "**/*"
