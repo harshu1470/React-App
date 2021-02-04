@@ -20,8 +20,6 @@ Phases:
       commands:
          - echo Building App
          - yarn build
-         - echo testing
-         - yarn test
     post_build:
       commands:
          - yarn start
