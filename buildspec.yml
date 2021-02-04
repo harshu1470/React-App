@@ -5,9 +5,8 @@ Phases:
          nodejs: 12
       commands:
          - echo installing Node12..
-         - apt install curl 
-         - curl -sL https://deb.nodesource.com/setup_12.x | bash -
-         - apt install -y nodejs
+         - apt-get install curl
+         - node --version
          - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
          - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
          - apt-get install -y yarn
@@ -21,7 +20,7 @@ Phases:
          - echo Testing
          - yarn test
          - echo Building App
-         - yarn run build
+         - yarn build
 artifacts:
     files:
       - "**/*"
