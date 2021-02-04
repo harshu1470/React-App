@@ -20,9 +20,6 @@ Phases:
       commands:
          - echo Building App
          - yarn build
-    post_build:
-      commands:
-         - yarn start
 artifacts:
     files:
       - "**/*"
