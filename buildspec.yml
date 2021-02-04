@@ -19,7 +19,7 @@ Phases:
          - echo Testing
          - yarn test
          - echo Building App
-         - yarn build
+         - yarn run build
 artifacts:
     files:
       - "**/*"
