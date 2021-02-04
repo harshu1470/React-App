@@ -4,7 +4,7 @@ Phases:
       runtime-versions:
          nodejs: 12
       commands:
-         - echo installing Node12......
+         - echo installing Node12.......
          - apt-get install curl
          - node --version
          - npm --version
@@ -21,4 +21,5 @@ artifacts:
     files:
       - "**/*"
     discard-paths: no
-    base-directory: dist
+    base-directory: build
+
