@@ -14,6 +14,7 @@ Phases:
       commands:
          - echo Installing yarn 
          - yarn
+         - yarn --version
     build:
       commands:
          - echo Testing
