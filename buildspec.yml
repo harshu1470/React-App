@@ -20,8 +20,3 @@ Phases:
       commands:
          - echo Building App
          - yarn build
-artifacts:
-    files:
-      - "**/*"
-    discard-paths: no
-    base-directory: dist
