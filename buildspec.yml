@@ -20,7 +20,7 @@ Phases:
       commands:
        
          - echo Building App
-         - yarn build
+         - yarn run build
 artifacts:
     files:
       - "**/*"
