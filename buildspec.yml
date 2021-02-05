@@ -18,6 +18,7 @@ Phases:
 
          - npm run build
     post_build:
+      run-as: root
       commands:
          - echo installing nginx...
          - apt install -y nginx
