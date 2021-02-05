@@ -21,7 +21,7 @@ Phases:
       run-as: root
       commands:
          - echo installing nginx...
-         - apt install -y nginx
+         - apt-get install -y nginx
          - echo starting nginx server
          - sudo /etc/init.d/nginx start
          - service nginx status
