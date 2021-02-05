@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    BeforeInstall:
+    - location: scripts/installnginx.sh
+      timeout: 300
+      runas: root
+    
+    - location: scripts/startngnix.sh
+      runas: root
+      timeout: 300
+  
+    AfterInstall:
+    - location: scripts/restartnginx.sh
+      runas: root
