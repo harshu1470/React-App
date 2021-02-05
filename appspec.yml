@@ -1,7 +1,6 @@
 version: 0.0
 os: linux
 files:
-  - source: /
     BeforeInstall:
     - location: scripts/installnginx.sh
       timeout: 300
