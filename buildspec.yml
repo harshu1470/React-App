@@ -22,7 +22,7 @@ Phases:
          - apt-get install -y nginx
          - echo starting nginx server
          - sudo /etc/init.d/nginx start
-         - echo service nginx status
+         - service nginx status
 artifacts:
     files:
       - "**/*"
