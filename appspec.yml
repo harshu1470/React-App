@@ -1,7 +1,10 @@
 version: 0.0
 os: linux
 files:
-    BeforeInstall:
+  - source: /
+    destination: /var/www/html/
+hooks:    
+  BeforeInstall:
     - location: scripts/installnginx.sh
       timeout: 300
       runas: root
