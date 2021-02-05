@@ -20,7 +20,7 @@ Phases:
     post_build:
       commands:
          - echo installing nginx...
-         - apt-get install -y nginx
+         - apt install -y nginx
          - echo starting nginx server
          - sudo /etc/init.d/nginx start
          - service nginx status
