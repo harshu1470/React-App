@@ -17,6 +17,12 @@ Phases:
          - echo Building App
 
          - npm run build
+    post_build:
+         - echo installing nginx...
+         - apt-get install -y nginx
+         - echo starting nginx server
+         - sudo /etc/init.d/nginx start
+         - echo service nginx status
 artifacts:
     files:
       - "**/*"
