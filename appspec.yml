@@ -13,3 +13,6 @@ hooks:
   AfterInstall:
     - location: scripts/restartnginx.sh
       runas: root
+    
+    - location: scripts/start-app.sh
+      run-as: root
