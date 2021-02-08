@@ -5,6 +5,11 @@ files:
     destination: /usr/share/nginx/html/    
 hooks:  
   BeforeInstall:
+    
+    - location: scripts/install_dependencies.sh
+      runas: root
+      timeout: 300
+    
     - location: scripts/installnginx.sh
       timeout: 300
       runas: root
