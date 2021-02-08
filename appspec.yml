@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /usr/share/nginx/html/    
 hooks:  
-    BeforeInstall:
+  BeforeInstall:
     - location: scripts/installnginx.sh
       timeout: 300
       runas: root
@@ -13,6 +13,6 @@ hooks:
       runas: root
       timeout: 300
   
-    AfterInstall:
+   AfterInstall:
     - location: scripts/restartnginx.sh
       runas: root
