@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: public/
+  - source: /
     destination: /usr/share/nginx/html
 hooks:    
   BeforeInstall:
