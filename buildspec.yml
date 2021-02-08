@@ -1,5 +1,5 @@
 version: 0.2
-Phases:
+phases:
     install:
       runtime-versions:
          nodejs: 12
