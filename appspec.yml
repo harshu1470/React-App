@@ -9,14 +9,6 @@ hooks:
     - location: scripts/install_dependencies.sh
       runas: root
       timeout: 300
-    
-    - location: scripts/installnginx.sh
-      timeout: 300
-      runas: root
-    
-    - location: scripts/startnginx.sh
-      runas: root
-      timeout: 300
   
   AfterInstall:
     - location: scripts/restartnginx.sh
@@ -26,3 +18,7 @@ hooks:
     - location: scripts/stopnginx.sh
       timeout: 300
       runas: root
+    
+    - location: scripts/start-app.sh
+      run-as: root
+
