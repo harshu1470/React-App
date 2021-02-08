@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: public/
+  - source: build/*
     destination: /usr/share/nginx/html/    
 hooks:  
   BeforeInstall:
@@ -18,6 +18,11 @@ hooks:
       runas: root
       timeout: 300
   
-   AfterInstall:
+  AfterInstall:
     - location: scripts/restartnginx.sh
+      runas: root
+   
+  ApplicationStop:
+    - location: scripts/stopnginx.sh
+      timeout: 300
       runas: root
