@@ -5,7 +5,6 @@ Phases:
          nodejs: 12
       commands:
          - echo installing Node12.......
-         - apt-get install curl
          - node --version
          - npm --version
     pre_build:
