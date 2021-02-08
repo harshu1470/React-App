@@ -4,8 +4,12 @@ files:
   - source: /build/
     destination: /usr/share/nginx/html/    
 hooks:  
+  ApplicationStop:
+    - location: scripts/stopnginx.sh
+      timeout: 300
+      runas: root
+      
   BeforeInstall:
-    
     - location: scripts/install_dependencies.sh
       runas: root
       timeout: 300
@@ -13,9 +17,9 @@ hooks:
   AfterInstall:
     - location: scripts/restartnginx.sh
       runas: root
-   
-  ApplicationStop:
-    - location: scripts/stopnginx.sh
+      timeout: 300
+  ApplicationStart:
+    - location: scripts/startnginx.sh
       timeout: 300
       runas: root
 
