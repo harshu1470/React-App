@@ -18,4 +18,8 @@ hooks:
     - location: scripts/restartnginx.sh
       runas: root
       timeout: 300
+  ApplicationStart:
+    - location: scripts/startnginx.sh
+      timeout: 300
+      runas: root
 
