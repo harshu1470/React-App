@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: build/
-    destination: /var/www/ngin-x
+    destination: /usr/share/nginx/html
 hooks:    
   BeforeInstall:
     - location: scripts/installnginx.sh
