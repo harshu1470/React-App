@@ -3,5 +3,18 @@ os: linux
 files:
   - source: /index.html
     destination: /usr/share/nginx/html/    
-
-
+ 
+    ApplicationStop:
+      - location: scripts/stopnginx.sh
+        timeout: 300
+        runas: root
+      
+    BeforeInstall:
+      - location: scripts/install_dependencies.sh
+        runas: root
+        timeout: 300
+  
+    ApplicationStart:
+      - location: scripts/startnginx.sh
+        runas: root
+        timeout: 300
