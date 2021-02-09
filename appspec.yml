@@ -5,12 +5,8 @@ files:
     destination: /usr/share/nginx/html/   
 permissions:
   - object: /usr/share/nginx/html/
-    pattern: "**"
     owner: root
     group: root
-    mode: 777
-    type:
-      - file
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
