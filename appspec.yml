@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /Sample_webApp.zip
+  - source: /Memoir-App.zip
     destination: /usr/share/nginx/html/   
 permissions:
   - object: /usr/share/nginx/html/
