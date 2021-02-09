@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /usr/share/nginx/html/   
 permissions:
-  - object: /usr/share/nginx/html
+  - object: /usr/share/nginx/html/
     pattern: "**"
     owner: root
     group: root
