@@ -4,13 +4,13 @@ files:
   - source: /
     destination: /usr/share/nginx/html/   
 permissions:
-   - object: /usr/share/nginx/html
-     pattern: "**"
-     owner: root
-     group: root
-     mode: 755
-     type:
-       - file
+  - object: /usr/share/nginx/html
+    pattern: "**"
+    owner: root
+    group: root
+    mode: 777
+    type:
+      - file
 hooks:
   ApplicationStop:
     - location: scripts/stopnginx.sh
