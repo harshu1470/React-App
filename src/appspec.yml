@@ -12,9 +12,13 @@ permissions:
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh 
-      timeout: 300
+      timeout: 100
       runas: root
   AfterInstall:
-    - location: scripts/installnginx.sh    
-      timeout: 300
+    - location: scripts/startnginx.sh    
+      timeout: 100
+      runas: root
+  ApplicationStart:
+    - location: scripts/restartnginx.sh
+      timeout: 100
       runas: root
