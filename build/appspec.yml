@@ -10,7 +10,7 @@ permissions:
     mode: 777
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies.sh 
+    - location: /scripts/install_dependencies.sh 
       timeout: 100
       runas: root
   AfterInstall:
