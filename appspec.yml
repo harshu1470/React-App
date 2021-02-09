@@ -12,10 +12,6 @@ permissions:
     type:
       - file
 hooks:
-  ApplicationStop:
-    - location: scripts/stopnginx.sh
-      timeout: 300
-      runas: root
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
