@@ -11,6 +11,7 @@ phases:
       commands:
          - echo Installing packages
          - npm ci
+
     build:
       commands:
          - echo Building App
