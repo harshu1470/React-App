@@ -14,10 +14,10 @@ hooks:
       timeout: 100
       runas: root
   AfterInstall:
-    - location: scripts/startnginx.sh    
+    - location: /scripts/startnginx.sh    
       timeout: 100
       runas: root
   ApplicationStart:
-    - location: scripts/restartnginx.sh
+    - location: /scripts/restartnginx.sh
       timeout: 100
       runas: root
